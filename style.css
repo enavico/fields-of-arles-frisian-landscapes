@@ -7,7 +7,7 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* riduce lo spazio sotto l'header */
 }
 
 header h1 {
