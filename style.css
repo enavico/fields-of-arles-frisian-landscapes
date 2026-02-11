@@ -93,7 +93,7 @@ footer {
 }
 
 .card-image {
-  max-width: 220px;
+  max-width: 150px;   /* riduce la larghezza delle carte */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
