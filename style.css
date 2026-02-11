@@ -104,7 +104,7 @@ footer {
 /* --- Pulsante Randomize Setup --- */
 #randomizeBtn {
   display: block;
-  margin: 0.5rem auto;
+  margin: 0.3rem auto 1rem auto; /* meno spazio sopra, un po’ sotto */
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;       /* grassetto */
