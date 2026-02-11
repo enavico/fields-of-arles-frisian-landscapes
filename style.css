@@ -169,15 +169,14 @@ footer p {
   }
 }
 
-/* --- Link BGG --- */
+/* Link BGG nel testo introduttivo */
 .bgg-link {
-  color: #A06B4B;          /* marrone simile al pulsante e nome espansione */
-  font-weight: bold;        /* leggermente più evidente */
-  text-decoration: underline; /* sottolineato */
+  color: #A06B4B !important;       /* marrone simile al pulsante e nome espansione */
+  font-weight: bold !important;     /* grassetto */
+  text-decoration: underline !important; /* sottolineato */
   transition: color 0.2s;
 }
 
-/* Hover sul link */
 .bgg-link:hover {
-  color: #8B5E3C;
+  color: #8B5E3C !important;       /* cambia tonalità al passaggio del mouse */
 }
