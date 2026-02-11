@@ -81,7 +81,7 @@ button:hover {
 footer {
   margin-top: 3rem;
   padding: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.70rem;
   text-align: center;
   color: #555;
 }
@@ -143,4 +143,17 @@ footer p {
   line-height: 1.4;           /* distanza tra righe leggibile */
   margin-top: 2rem;           /* spazio sopra il footer */
   margin-bottom: 1rem;        /* piccolo spazio sotto */
+}
+
+/* Solo desktop: schermi larghi almeno 1024px */
+@media (min-width: 1024px) {
+  /* Banner +20% */
+  .header-banner {
+    max-height: 144px; /* 120px * 1.2 */
+  }
+
+  /* Carte +20% */
+  .card-image {
+    max-width: 180px;  /* 150px * 1.2 */
+  }
 }
