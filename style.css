@@ -31,9 +31,12 @@ header .subtitle {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* leggero effetto rilievo */
 }
 
+/* --- Subtitle generale --- */
 .subtitle {
+  text-align: center;
   opacity: 0.9;
-  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;  /* leggermente più piccolo su desktop, leggibile */
 }
 
 main {
@@ -132,9 +135,10 @@ footer a:hover {
   text-decoration: underline; /* sottolineatura solo al passaggio del mouse */
 }
 
-/* --- Nome dell'espansione in marrone --- */
+/* --- Nome dell'espansione --- */
 .expansion-name {
-  color: #8B5E3C; /* stesso marrone del pulsante */
+  color: #8B5E3C;      /* marrone come pulsante */
+  font-weight: bold;
 }
 
 /* --- Footer --- */
@@ -163,4 +167,17 @@ footer p {
   .card-image {
     max-width: 180px;  /* 150px * 1.2 */
   }
+}
+
+/* --- Link BGG --- */
+.bgg-link {
+  color: #A06B4B;          /* marrone simile al pulsante e nome espansione */
+  font-weight: bold;        /* leggermente più evidente */
+  text-decoration: underline; /* sottolineato */
+  transition: color 0.2s;
+}
+
+/* Hover sul link */
+.bgg-link:hover {
+  color: #8B5E3C;
 }
