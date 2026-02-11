@@ -22,11 +22,11 @@ header .subtitle {
   margin-bottom: 0.5rem;
 }
 
-header .header-banner {
-  max-width: 300px;  /* ridimensiona l’immagine */
+.header-banner {
+  max-width: 100%;
   height: auto;
-  margin-top: 0.5rem;
-  border-radius: 5px; /* opzionale */
+  display: block;
+  margin: 1rem auto;
 }
 
 .subtitle {
