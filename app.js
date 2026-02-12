@@ -2,7 +2,7 @@
 const deckA = Array.from({ length: 16 }, (_, i) => String(i + 1).padStart(2, "0"));
 const deckB = Array.from({ length: 16 }, (_, i) => String(i + 1).padStart(2, "0"));
 const deckC = Array.from({ length: 16 }, (_, i) => String(i + 1).padStart(2, "0"));
-
+const noTeaTradeCheckbox = document.getElementById("noTeaTrade");
 const cardsContainer = document.getElementById("cards");
 const randomizeBtn = document.getElementById("randomizeBtn");
 
@@ -29,9 +29,21 @@ function drawOne(deck) {
 
 // Randomizza carte e aggiorna URL
 function randomizeCards() {
-  const a = drawOne(deckA);
-  const b = drawOne(deckB);
-  const c = drawOne(deckC);
+  let availableDeckA = [...deckA];
+  let availableDeckB = [...deckB];
+  let availableDeckC = [...deckC];
+
+  // Opzione: Play without Tea & Trade
+  if (noTeaTradeCheckbox.checked) {
+    // Front_A_11.png
+    availableDeckA = availableDeckA.filter(card => card !== "11");
+    // Front_B_09.png
+    availableDeckB = availableDeckB.filter(card => card !== "09");
+  }
+
+  const a = drawOne(availableDeckA);
+  const b = drawOne(availableDeckB);
+  const c = drawOne(availableDeckC);
 
   const drawn = [
     getCardImage("A", a),
@@ -41,11 +53,10 @@ function randomizeCards() {
 
   showCards(drawn);
 
-  // Aggiorna URL
+  // aggiorna URL (se già lo usavi)
   const newUrl = `${location.origin}${location.pathname}?a=${a}&b=${b}&c=${c}`;
-  history.replaceState(null, '', newUrl);
+  history.replaceState(null, "", newUrl);
 }
-
 // Carica setup da URL se presente
 function loadFromUrl() {
   const params = new URLSearchParams(location.search);
