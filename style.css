@@ -106,7 +106,7 @@ footer {
 
 .controls {
   text-align: center;
-  margin-top: 1.2rem;   /* spazio sotto le carte */
+  margin-top: 1.8rem;   /* spazio sotto le carte */
 }
 
 /* --- Pulsante Randomize Setup --- */
@@ -187,7 +187,7 @@ footer p {
 }
 
 .options {
-  margin-top: 0.3rem;
+  margin-top: 0.7rem;
   font-size: 0.9rem;
   color: #7f8c8d;          /* grigio soft */
 }
